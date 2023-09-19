@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Web xem phim</h1>
+  <p>Nơi cho bạn thư giãn sau những giờ học mệt mỏi.</p>
+</div>
+
+<div class="navbar">
+  <a href="#" class="active">Trang chủ</a>
+  <a href="#">Loại phim</a>
+  <a href="#">Thời gian</a>
+  <a href="#" class="right">Cá nhân</a>
+</div>
+
+<div class="row">
+  <div class="side">
+    <h2>Về tôi</h2>
+    <h5>Bức ảnh về tôi:</h5>
+    <img src="https://media.thenerdstash.com/wp-content/uploads/2023/04/Resident-Evil-4-How-to-Play-as-HunK.jpg" alt="Mô tả ảnh" width="300" height="200">
+    <p>"This is war...... survival's your responsibility.</p>
+  </div>
+  <div class="main">
+    <h2>Doraemon tập dài - Thám hiểm vùng đất mới</h2>
+    <h5>Phim Hoạt Hình · 24 thg 8, 2022</h5>
+    <img src="https://cdn.popsww.com/blog-kids/sites/3/2021/10/tan-nobita-tham-hiem-vung-dat-moi-peko-va-5-nha-tham-hiem-1024x576.png" alt="Mô tả ảnh" width="800" height="500">
+    <p>Một bộ phim thú vị về cuộc phiêu lưu của Nobita và bạn bè trong việc khám phá một vùng đất mới đầy bí ẩn và hấp dẫn.</p>
+    <br>
+    <h2>Thám Tử Lừng Danh Conan: Câu Chuyện Về Haibara Ai ~ Chuyến Tàu Sắt Bí Ẩn Màu Đen</h2>
+    <h5>Phim Hoạt Hình · 18 thg 4, 2015</h5>
+    <img src="https://popsimg.akamaized.net/api/v2/containers/file2/cms_thumbnails/horizontal_poster-9fe8f0f24ace-1680747333183-4h5vYtqd.jpg?v=0&maxW=600&format=png" alt="Mô tả ảnh" width="800" height="500">
+    <p>Trong Chuyến Tàu Sắt Bí Ẩn Màu Đen, Conan và các bạn của mình tham gia vào một chuyến tàu sắt tốc độ cao, nơi một vụ án mạng kỳ bí xảy ra. Nạn nhân là một người đàn ông trên chuyến tàu. Khi chuyến tàu tiến hành, một số sự kiện kỳ lạ và hết sức đáng nghi đã xảy ra, đặc biệt là việc phát hiện ra một hộp quà bí ẩn và bất thường. Conan, cùng với Ran, Kogoro, và các nhân vật khác, phải tìm hiểu về nguyên nhân và thủ phạm vụ án trước khi chuyến tàu đến đích.</p>
+  </div>
+</div>
+
+<div class="footer">
+    <div style="background-color: #333; color: white; padding: 20px; text-align: center;">
+        <h2>Thông tin liên hệ</h2>
+        <p>Địa chỉ: Số 123 Đường Phố, Thành phố, Quốc gia</p>
+        <p>Email: xemphimvui@email.com</p>
+        <p>Điện thoại: +84 123 456 789</p>
+      </div>
+      <div style="background-color: #1abc9c; color: white; padding: 20px; text-align: center;">
+        <p>&copy; 2023 Trang web xem phim. Bản quyền thuộc về chúng tôi.</p>
+      </div>
+</body>
+</html>
